@@ -32,7 +32,7 @@ jobs:
         with:
           version: 8
       - name: Install NPM dependencies
-        run: pnpm i --ignore-scripts
+        run: pnpm i
       - name: Auto CR
         env:
           PR_NUMBER: ${{ github.event.number }}

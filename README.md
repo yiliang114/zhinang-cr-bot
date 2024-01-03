@@ -4,7 +4,7 @@
 
 > https://zhinang.ai/
 
-智囊 AI. by@aoao-eth
+智囊 AI. by[@aoao-eth](https://github.com/Yootou-dev)
 
 ## Use
 
@@ -28,10 +28,10 @@ on:
       - main
 
 permissions:
-  contents: 'write'
-  id-token: 'write'
+  contents: "write"
+  id-token: "write"
   pull-requests: write
-  issues: 'write'
+  issues: "write"
 
 jobs:
   AutoCR:

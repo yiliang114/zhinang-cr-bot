@@ -1,0 +1,42 @@
+name: auto-cr action
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: 'write'
+  id-token: 'write'
+  pull-requests: write
+  issues: 'write'
+
+jobs:
+  AutoCR:
+    if: github.event_name != 'pull_request' || !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    steps:
+      - name: use Node.js 19
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+      - name: Cache NPM dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-npm-cache-${{ hashFiles('./pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache-
+      - name: Install dependencies
+        run: pnpm i
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+      - name: Auto CR
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ZHINANG_TOKEN: ${{ secrets.ZHINANG_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+          NODE_ENV: production
+        run: zhinang cr $PR_NUMBER --zhinang-token $ZHINANG_TOKEN --owner $OWNER --repo $REPO

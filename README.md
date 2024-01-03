@@ -1,10 +1,10 @@
 # @yiliang114/zhinang-cr-bot
 
-<!-- <p align="center">
+<p align="center">
   <a href="https://npmcharts.com/compare/@yiliang114/zhinang-cr-bot?minimal=true"><img src="https://img.shields.io/npm/dm/@yiliang114/zhinang-cr-bot.svg?sanitize=true" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/@yiliang114/zhinang-cr-bot"><img src="https://img.shields.io/npm/v/@yiliang114/zhinang-cr-bot.svg?sanitize=true" alt="Version"></a>
   <a href="https://www.npmjs.com/package/@yiliang114/zhinang-cr-bot"><img src="https://img.shields.io/npm/l/@yiliang114/zhinang-cr-bot.svg?sanitize=true" alt="License"></a>
-</p> -->
+</p>
 
 ## What's ZhiNang?
 
@@ -19,6 +19,14 @@
 ## Use
 
 ### Get ZhiNang Token
+
+#### 1. login zhinang.ai
+
+<img width="1264" alt="image" src="https://github.com/yiliang114/zhinang-cr-bot/assets/11473889/5c267581-71fa-45f4-abed-653136153032">
+
+#### 2. copy token
+
+<img width="1532" alt="image" src="https://github.com/yiliang114/zhinang-cr-bot/assets/11473889/6ededf7c-7236-4c54-9ab1-76e77636d72e">
 
 ### With Bash
 

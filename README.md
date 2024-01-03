@@ -1,10 +1,20 @@
 # @yiliang114/zhinang-cr-bot
 
+<!-- <p align="center">
+  <a href="https://npmcharts.com/compare/@yiliang114/zhinang-cr-bot?minimal=true"><img src="https://img.shields.io/npm/dm/@yiliang114/zhinang-cr-bot.svg?sanitize=true" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/@yiliang114/zhinang-cr-bot"><img src="https://img.shields.io/npm/v/@yiliang114/zhinang-cr-bot.svg?sanitize=true" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/@yiliang114/zhinang-cr-bot"><img src="https://img.shields.io/npm/l/@yiliang114/zhinang-cr-bot.svg?sanitize=true" alt="License"></a>
+</p> -->
+
 ## What's ZhiNang?
 
 > https://zhinang.ai/
 
 智囊 AI. by[@aoao-eth](https://github.com/Yootou-dev)
+
+## Demo
+
+[Github Action](https://github.com/yiliang114/zhinang-cr-bot/actions)
 
 ## Use
 
@@ -28,10 +38,10 @@ on:
       - main
 
 permissions:
-  contents: "write"
-  id-token: "write"
+  contents: 'write'
+  id-token: 'write'
   pull-requests: write
-  issues: "write"
+  issues: 'write'
 
 jobs:
   AutoCR:

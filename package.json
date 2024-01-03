@@ -7,17 +7,24 @@
     "zhinang": "./bin/zhinang.js"
   },
   "keywords": [
-    "zhinang-cr"
+    "zhinang ai",
+    "review",
+    "code review",
+    "github",
+    "pull request",
+    "GPT"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
+    "preinstall": "npx only-allow pnpm",
+    "dev": "tsc --watch",
+    "build": "tsc"
   },
   "author": "yiliang114",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.9.0",
-    "@yiliang114/tsconfig": "^3.0.3"
+    "@yiliang114/tsconfig": "^3.0.3",
+    "@yiliang114/prettier-config": "^3.0.4"
   },
   "dependencies": {
     "@octokit/rest": "^20.0.2",

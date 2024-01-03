@@ -1,0 +1,13 @@
+node_modules
+dist
+lib
+coverage
+output
+.vercel
+.next/
+
+dispatch
+build
+
+.env
+.env.development.local

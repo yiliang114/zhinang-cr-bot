@@ -41,4 +41,4 @@ jobs:
           OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
           NODE_ENV: production
-        run: zhinang cr $PR_NUMBER --zhinang-token $ZHINANG_TOKEN --owner $OWNER --repo $REPO
+        run: node ./bin/zhinang cr $PR_NUMBER --zhinang-token $ZHINANG_TOKEN --owner $OWNER --repo $REPO

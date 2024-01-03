@@ -6,6 +6,10 @@
 
 智囊 AI. by[@aoao-eth](https://github.com/Yootou-dev)
 
+## Demo
+
+[Github Action](https://github.com/yiliang114/zhinang-cr-bot/actions)
+
 ## Use
 
 ### Get ZhiNang Token
@@ -28,10 +32,10 @@ on:
       - main
 
 permissions:
-  contents: "write"
-  id-token: "write"
+  contents: 'write'
+  id-token: 'write'
   pull-requests: write
-  issues: "write"
+  issues: 'write'
 
 jobs:
   AutoCR:

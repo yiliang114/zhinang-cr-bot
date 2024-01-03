@@ -1,25 +1,3 @@
-# @yiliang114/zhinang-cr-bot
-
-## What's ZhiNang?
-
-> https://zhinang.ai/
-
-智囊 AI. by[@aoao-eth](https://github.com/Yootou-dev)
-
-## Use
-
-### Get ZhiNang Token
-
-### With Bash
-
-```bash
-yarn add global @yiliang114/zhinang-cr-bot
-NODE_ENV=production zhinang cr 290 --zhinang-token xxxx --owner yiliang114 --repo task-functions
-```
-
-### With Github Action
-
-```yml
 name: auto-cr action
 
 on:
@@ -28,10 +6,10 @@ on:
       - main
 
 permissions:
-  contents: "write"
-  id-token: "write"
+  contents: 'write'
+  id-token: 'write'
   pull-requests: write
-  issues: "write"
+  issues: 'write'
 
 jobs:
   AutoCR:
@@ -42,9 +20,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19
-
+      - name: Cache NPM dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-npm-cache-${{ hashFiles('./pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache-
       - name: Install dependencies
-        run: yarn global add @yiliang114/zhinang-cr-bot
+        run: pnpm i
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
       - name: Auto CR
@@ -56,4 +40,3 @@ jobs:
           REPO: ${{ github.event.repository.name }}
           NODE_ENV: production
         run: zhinang cr $PR_NUMBER --zhinang-token $ZHINANG_TOKEN --owner $OWNER --repo $REPO
-```

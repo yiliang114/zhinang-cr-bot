@@ -3,12 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   '@octokit/rest': ^20.0.2
   '@types/node': ^20.9.0
+  '@yiliang114/prettier-config': ^3.0.4
   '@yiliang114/tsconfig': ^3.0.3
   cac: ^6.7.14
   dotenv: ^16.3.1
 
 dependencies:
   '@octokit/rest': 20.0.2
+  '@yiliang114/prettier-config': 3.0.4
   cac: 6.7.14
   dotenv: 16.3.1
 
@@ -126,6 +128,10 @@ packages:
     dependencies:
       undici-types: 5.26.5
     dev: true
+
+  /@yiliang114/prettier-config/3.0.4:
+    resolution: {integrity: sha512-kxdG3HATRMsfFTmqYxu0qQASJMeHOzodedZbYju2nxWYDCzm6iUHt24k4iC9u8/6UWvlTMWvVRjF9Wi8Py831A==}
+    dev: false
 
   /@yiliang114/tsconfig/3.0.3:
     resolution: {integrity: sha512-5c3elh/nK2u9C7nB9Tgm/f6X2VErhGGk4EQf8SwGgq3nK2VvIDxi2895B+iLCTo7MiVv9msfkRmUl+kMQvHKqQ==}
